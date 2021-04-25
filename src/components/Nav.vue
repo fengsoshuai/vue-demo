@@ -19,17 +19,6 @@
           <el-button type="info" @click="dialogFormVisible = true">增加网站</el-button>
         </li>
       </ul>
-      <table>
-      </table>
-            <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="queryInfo.pageNum"
-        :page-sizes="[2, 4, 6, 8]"
-        :page-size="queryInfo.pageNum"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="total">
-      </el-pagination>
   </div>
       </el-card>
       <!-- 增加网址的对话框 -->

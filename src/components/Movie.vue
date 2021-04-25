@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Parent :myList="movieList"></Parent>
+      <Parent :myList="movieList" :isList="isList"></Parent>
     </div>
 </template>
 
@@ -12,9 +12,13 @@ export default {
   data: function () {
     return {
       movieList: [
-        { id: 1, name: 'movie1' },
-        { id: 2, name: 'movie2' },
-        { id: 3, name: 'movie3' }]
+        { name: '百度', router: 'https://www.baidu.com/', logo: 'https://www.baidu.com/favicon.ico' },
+        { name: 'B站', router: 'https://www.bilibili.com/', logo: 'https://www.bilibili.com/favicon.ico' },
+        { name: 'CSDN', router: 'https://blog.csdn.net/', logo: 'https://blog.csdn.net/favicon.ico' },
+        { name: 'Github', router: 'https://github.com/', logo: 'https://github.com/favicon.ico' },
+        { name: '电影天堂', router: 'https://btbtt.us/', logo: 'https://btbtt.us/favicon.ico' }
+      ],
+      isList: false
     }
   }
 }

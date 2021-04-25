@@ -1,6 +1,6 @@
 <template>
     <div id="pa">
-        <child :contents="myList"></child>
+        <child :contents="myList" :isList="isList"></child>
     </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
   props: {
     myList: {
       type: Array,
+      required: true
+    },
+    isList: {
+      type: Boolean,
       required: true
     }
   }
