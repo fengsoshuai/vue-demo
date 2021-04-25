@@ -1,24 +1,25 @@
-# vue-demo
+# 一、本地开发
 
-## Project setup
+> 首先需要安装npm。使用vue3.0版本。
+
+### 初始化项目
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地开发运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译构建线上文件
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### lint语法规则
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
