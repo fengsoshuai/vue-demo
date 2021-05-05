@@ -20,6 +20,7 @@
         </li>
       </ul>
   </div>
+
       </el-card>
       <!-- 增加网址的对话框 -->
       <el-dialog title="新增网址" :visible.sync="dialogFormVisible">
@@ -50,6 +51,11 @@
           <el-button type="primary" @click="onSubmit">确 定</el-button>
         </div>
       </el-dialog>
+
+        <!-- 二维码 -->
+      <div class="qrcode-class">
+        <canvas id="canvas"></canvas>
+      </div>
   </div>
 </template>
 
@@ -57,6 +63,11 @@
 // vue add axios 先增加插件，使用命令行操作
 // 导入
 import axios from 'axios'
+import Vue from 'vue'
+// 使用二维码插件
+import QRCode from 'qrcode'
+Vue.use(QRCode)
+
 export default {
   name: 'Nav',
   data: function () {
@@ -96,6 +107,9 @@ export default {
   created () {
     this.initSiteList()
     this.initTypeList()
+  },
+  mounted () {
+    this.showqrcode()
   },
   methods: {
     // 初始化网站列表
@@ -147,6 +161,18 @@ export default {
           _this.initSiteList()
         }
       })
+    },
+    // 展示二维码
+    showqrcode () {
+      const canvas = document.getElementById('canvas')
+      QRCode.toCanvas(canvas, 'https://blog.csdn.net/FBB360JAVA', function (error) {
+        if (error) {
+          console.log(error)
+        } else {
+          // 成功
+          // console.log('success！')
+        }
+      })
     }
   }
 }
@@ -179,5 +205,10 @@ export default {
 .add-button button {
   position: relative;
   top: 36%;
+}
+.qrcode-class {
+  height: 150px;
+  width: 150px;
+  margin: 3px 3px;
 }
 </style>

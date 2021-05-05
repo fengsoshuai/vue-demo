@@ -1,25 +1,53 @@
 <template>
-    <div>
-      <Parent :myList="movieList" :isList="isList"></Parent>
-    </div>
+  <div>
+    <el-card>
+      <div id="movies">
+        <ul>
+          <li v-for="Panel in defalutPanelPropList" :key="Panel.id">
+            <DefaultLiPanel :defaultPanelProp="Panel"
+              :divClassStyle="classStyle.divClassStyle"
+              :aClassStyle="classStyle.aClassStyle"
+              :imgClassStyle="classStyle.imgClassStyle"
+              :infoClassStyle="classStyle.infoClassStyle"></DefaultLiPanel>
+          </li>
+        </ul>
+      </div>
+    </el-card>
+  </div>
 </template>
 
 <script>
-import Parent from './Parent.vue'
+import DefaultLiPanel from './panel/DefaultLiPanel.vue'
+import { PanelEntity } from '../assets/js/panel.js'
 export default {
-  components: { Parent },
+  components: { DefaultLiPanel },
   name: 'Movie',
   data: function () {
     return {
-      movieList: [
-        { name: '百度', router: 'https://www.baidu.com/', logo: 'https://www.baidu.com/favicon.ico' },
-        { name: 'B站', router: 'https://www.bilibili.com/', logo: 'https://www.bilibili.com/favicon.ico' },
-        { name: 'CSDN', router: 'https://blog.csdn.net/', logo: 'https://blog.csdn.net/favicon.ico' },
-        { name: 'Github', router: 'https://github.com/', logo: 'https://github.com/favicon.ico' },
-        { name: '电影天堂', router: 'https://btbtt.us/', logo: 'https://btbtt.us/favicon.ico' }
+      defalutPanelPropList: [
+        new PanelEntity('1001', 'https://www.xiaohx.org/', '小浣熊', 'https://www.xiaohx.org/favicon.ico', '小浣熊主要用来下载视频'),
+        new PanelEntity('1002', 'https://www.66s.cc/', '6v影视', 'https://www.66s.cc/favicon.ico', '6v影视可以在线看电影、电视剧等'),
+        new PanelEntity('1003', 'https://www.bilibili.com/', 'B站', 'https://www.bilibili.com/favicon.ico', 'B站是多元化的强大视频网站'),
+        new PanelEntity('1004', 'https://www.dytt89.com/', '电影天堂', 'https://www.dytt89.com/favicon.ico', '电影天堂主要用于下载视频资源')
       ],
-      isList: false
+      classStyle: {
+        divClassStyle: 'default-divClassStyle',
+        aClassStyle: 'default-aClassStyle',
+        imgClassStyle: 'default-imgClassStyle',
+        infoClassStyle: 'default-infoClassStyle'
+      }
     }
   }
 }
 </script>
+
+<style scoped>
+#movies ul li {
+  list-style-type: none;
+  float: left;
+}
+#movies ul li div:hover {
+  background-color: floralwhite;
+  box-shadow: 6px 6px 5px #d6d0d0;
+}
+</style>

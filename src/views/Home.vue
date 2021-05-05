@@ -95,7 +95,7 @@ export default {
             {
               id: 204,
               menuName: '小说',
-              path: '',
+              path: 'Novel',
               order: 1,
               icon: 'el-icon-bell',
               children: []
@@ -103,7 +103,7 @@ export default {
             {
               id: 205,
               menuName: '漫画',
-              path: '',
+              path: 'Caricature',
               order: 2,
               icon: 'el-icon-bell',
               children: []
@@ -111,7 +111,7 @@ export default {
             {
               id: 206,
               menuName: '有声读物',
-              path: '',
+              path: 'Audiobooks',
               order: 3,
               icon: 'el-icon-bell',
               children: []
@@ -119,7 +119,7 @@ export default {
             {
               id: 207,
               menuName: '杂志和其他类型',
-              path: '',
+              path: 'OtherBooks',
               order: 4,
               icon: 'el-icon-bell',
               children: []
@@ -136,7 +136,7 @@ export default {
             {
               id: 301,
               menuName: '在线听歌',
-              path: '',
+              path: 'MusicOnline',
               order: 1,
               icon: 'el-icon-bell',
               children: []
@@ -144,7 +144,7 @@ export default {
             {
               id: 302,
               menuName: '音乐下载',
-              path: '',
+              path: 'MusicDownload',
               order: 2,
               icon: 'el-icon-bell',
               children: []
@@ -152,7 +152,7 @@ export default {
             {
               id: 303,
               menuName: '音乐MV',
-              path: '',
+              path: 'MV',
               order: 3,
               icon: 'el-icon-bell',
               children: []
