@@ -51,11 +51,6 @@
           <el-button type="primary" @click="onSubmit">确 定</el-button>
         </div>
       </el-dialog>
-
-        <!-- 二维码 -->
-      <div class="qrcode-class">
-        <canvas id="canvas"></canvas>
-      </div>
   </div>
 </template>
 
@@ -108,9 +103,6 @@ export default {
     this.initSiteList()
     this.initTypeList()
   },
-  mounted () {
-    this.showqrcode()
-  },
   methods: {
     // 初始化网站列表
     initSiteList () {
@@ -161,18 +153,6 @@ export default {
           _this.initSiteList()
         }
       })
-    },
-    // 展示二维码
-    showqrcode () {
-      const canvas = document.getElementById('canvas')
-      QRCode.toCanvas(canvas, 'https://blog.csdn.net/FBB360JAVA', function (error) {
-        if (error) {
-          console.log(error)
-        } else {
-          // 成功
-          // console.log('success！')
-        }
-      })
     }
   }
 }
@@ -205,10 +185,5 @@ export default {
 .add-button button {
   position: relative;
   top: 36%;
-}
-.qrcode-class {
-  height: 150px;
-  width: 150px;
-  margin: 3px 3px;
 }
 </style>

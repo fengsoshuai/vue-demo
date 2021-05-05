@@ -232,6 +232,14 @@ export default {
               order: 2,
               icon: 'el-icon-date',
               children: []
+            },
+            {
+              id: 603,
+              menuName: '关于',
+              path: 'about',
+              order: 3,
+              icon: 'el-icon-user',
+              children: []
             }
           ]
         }
