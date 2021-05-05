@@ -6,6 +6,7 @@ import Movie from '../components/Movie.vue'
 import TV from '../components/TV.vue'
 import Moviearound from '../components/Moviearound.vue'
 import Nav from '../components/Nav.vue'
+import Novel from '../components/Novel.vue'
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,9 @@ const routes = [
       // 电视网址
       { path: '/TV', name: 'TV', component: TV },
       // 影视周边
-      { path: '/Moviearound', name: 'Moviearound', component: Moviearound }
+      { path: '/Moviearound', name: 'Moviearound', component: Moviearound },
+      // 小说
+      { path: '/Novel', name: 'Novel', component: Novel }
     ]
   },
   {
