@@ -228,7 +228,7 @@ export default {
             {
               id: 602,
               menuName: '日历',
-              path: 'Welcome',
+              path: 'Calendar',
               order: 2,
               icon: 'el-icon-date',
               children: []

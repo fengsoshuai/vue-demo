@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Welcome from '../views/Welcome.vue'
-import Movie from '../components/Movie.vue'
-import TV from '../components/TV.vue'
-import Moviearound from '../components/Moviearound.vue'
-import Nav from '../components/Nav.vue'
-import Novel from '../components/Novel.vue'
+import Calendar from '../views/Welcome.vue'
+import Movie from '../views/Movie.vue'
+import TV from '../views/TV.vue'
+import Moviearound from '../views/Moviearound.vue'
+import Nav from '../views/Nav.vue'
+import Novel from '../views/Novel.vue'
 
 Vue.use(VueRouter)
 
@@ -21,7 +21,7 @@ const routes = [
     // 子路由
     children: [
       // 日历
-      { path: '/welcome', name: 'Welcome', component: Welcome },
+      { path: '/calendar', name: 'Calendar', component: Calendar },
       // 常见网址
       { path: '/Nav', name: 'Nav', component: Nav },
       // 电影网址
