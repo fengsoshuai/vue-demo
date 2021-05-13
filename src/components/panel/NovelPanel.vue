@@ -7,7 +7,7 @@
         {{novelPanelProp.name}}
         <div class="downLogo"><a :href="novelPanelProp.download" target="_blank" title="下载"><i class="el-icon-download"></i></a></div>
       </div>
-      <transition name="el-fade-in">
+      <transition name="el-zoom-in-bottom">
         <div class="logo-back" @mouseleave="drow = !drow" v-if="drow">
           <h6>{{novelPanelProp.name}}</h6>
           {{novelPanelProp.info}}
@@ -64,10 +64,6 @@ export default {
   top: -27px;
 }
 
-.novel-name:hover {
-  font-weight: 800;
-}
-
 .logo {
   width: 120px;
   box-shadow:0px 0px 3px 2px #aaa;
@@ -81,6 +77,7 @@ export default {
   left: 3px;
   background-color: rgb(32, 189, 123);
   border-radius: 7px;
+  z-index: 10000;
 }
 .downLogo:hover {
   border: 1px solid #fff;
@@ -103,4 +100,5 @@ export default {
   /** 怪异盒子 */
   box-sizing:border-box
 }
+
 </style>
